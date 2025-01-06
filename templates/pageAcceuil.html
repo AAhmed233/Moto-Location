@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Page D'accueil</title>
+</head>
+    
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <a class="navbar-brand" href="/home">
+            <img src="{{ url_for('static', filename='images/motolog.png') }}" alt="logoo" style="height: 40px;">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav mx-auto"> 
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About us<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/PageContact/PContact.html">Contact<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plus
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/cataloque/catalog.html">Moto Disponible</a>
+                        <a class="dropdown-item" href="#">Rechercher une moto</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <form class="form-inline my-2 my-lg-0">
+               {% block login %}
+                <a class="btn btn-primary mr-2" href="/connexion">Connexion</a>
+                <a class="btn btn-outline-primary" href="/inscription">Inscription</a>
+                <p id="welcomeMessage" style="display: none;"></p>
+                <button id="logoutButton" style="display: none;" onclick="logout()">Déconnexion</button>
+                {% endblock %}
+            </form>
+            
+        </div>
+    </nav>
+
+    
+</header>
+<body>
+    
+
+
+    <div class="parallax">
+        <div class="textp">
+            <div class="rod">
+                MOTO LOC
+                
+            </div>
+
+            <img class="patcha" id="moto" src="{{ url_for('static', filename='images/motobg.png') }}" alt="">
+
+        </div>
+        <div class="parallax-content">
+            La liberté sur deux roues, à portée de main !
+        </div>
+    </div>
+
+    <div class="partie02">
+
+        <div class="prt1">
+           
+            
+            <button class="bouton1" type="button" onclick="window.location.href='#'">
+                Louer votre moto
+            </button>
+        </div>
+        <div>
+            <h3 class="mira">Les moto les plus populaires :</h3>
+        </div>
+       
+        <div class="ptr2">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='images/bmw01.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Gs 1250</h5>
+                    <p class="card-text">une moto polyvalente et puissante, idéale pour les aventures tout-terrain et les longs trajets routiers.</p>
+                    <a href="#" class="btn btn-primary">Voir description</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='images/bmwe01.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">BMW CE 04</h5>
+                    <p class="card-text"> un scooter électrique futuriste, combinant design innovant et performance pour une mobilité urbaine durable.</p>
+                    <a href="#" class="btn btn-primary">Voir description</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='images/tmax01.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Yamaha TMAX 560</h5>
+                    <p class="card-text">un scooter sportif haut de gamme, offrant puissance, confort et agilité pour une conduite urbaine et sur route.</p>
+                    <a href="#" class="btn btn-primary">Voir description</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div >
+
+            <div class="parallax1">
+
+
+
+            </div>
+
+        </div>
+  
+    </div>
+
+
+
+
+
+    
+    
+    <div class="container my-5">
+        <h2>Découvrez nos services</h2>
+       <div class="pero">
+        
+        <a href="https://wa.me/212684843584"  target="_blank">
+            <img src="{{ url_for('static', filename='images/whatssap.png') }}" class="what" alt="ww">
+        </a>
+        <a href="mailto:ismail.elhimass@gmail.com?subject=Demande%20de%20renseignements&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20avoir%20plus%20d'informations."
+        target="_blank">
+            <img src="{{ url_for('static', filename='images/gmail.png') }}" class="gmail" alt="ww">
+        </a>
+
+       </div>
+    </div>
+    
+
+    <div class="partie03" >
+        <div>
+            <p class="p1">Aide</p>
+            <p>contacter nous !</p>
+            <p>contact_us@motoLoc.com</p>
+            <p>comment acheter</p>
+        </div>
+        <div>
+            <p class="p1">Recrutemment</p>
+            <p>postuler en ligne !</p>
+            <p>postuler@motoLoc.com</p>
+            <p>comment faire</p>
+        </div>
+        <div>
+            <p class="p1">Colaboration</p>
+            <p>colaborer avec nous !</p>
+            <p>colaborer@motoLoc.com</p>
+            <p>plus d'info</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
