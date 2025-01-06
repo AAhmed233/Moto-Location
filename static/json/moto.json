@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Yamaha MT-07",
+        "type": "Sportif",
+        "images": [
+            "/static/images/mt07.jpeg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=1"
+    },
+    {
+        "id": 2,
+        "name": "Harley-Davidson V Rod",
+        "type": "Cruiser",
+        "images": [
+            "/static/images/harley01.jpg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=2"
+    },
+    {
+        "id": 3,
+        "name": "BMW F 450 GS",
+        "type": "Adventure",
+        "images": [
+            "/static/images/bmw01.jpg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=3"
+    },
+    {
+        "id": 4,
+        "name": "Honda X-ADV",
+        "type": "Scooter",
+        "images": [
+            "/static/images/xadv01.jpg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=4"
+    },
+    {
+        "id": 5,
+        "name": "Yamaha R1",
+        "type": "Sportif",
+        "images": [
+            "/static/images/r01.jpg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=5"
+    },
+    {
+        "id": 6,
+        "name": "Yamaha Tmax Tech Max",
+        "type": "Scooter",
+        "images": [
+            "/static/images/tmax01.jpg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=6"
+    },
+    {
+        "id": 7,
+        "name": "Quad électrique sportif",
+        "type": "Sportif",
+        "images": [
+            "/static/images/q01.jpg"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=7"
+    },
+    {
+        "id": 8,
+        "name": "Scooter BMW CE 04",
+        "type": "Scooter",
+        "images": [
+            "/static/images/bmwe01.png"
+        ],
+        "link": "http://127.0.0.1:5000/moto_details?id=8"
+    }
+]
